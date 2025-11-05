@@ -1,8 +1,14 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-# 👉 तुम्हारे BotFather से मिला Token डालो
-TOKEN = "8459449517:AAEgWHXFTYg-RNc6zmPkpQDP1_JYmxQFHZY"
+# Import os for environment variables
+import os
+
+# Get token from environment variable
+TOKEN = os.getenv("TOKEN")
+
+if not TOKEN:
+    raise ValueError("No TOKEN found in environment variables. Please set the TOKEN environment variable.")
 
 # temporary user data store
 user_data = {}

@@ -1,0 +1,6 @@
+python-telegram-bot>=20.0
+
+# Notes:
+# - This project uses the `telegram` package (python-telegram-bot).
+# - If you want exact pinned versions, install packages then run:
+#     pip freeze > requirements.txt
